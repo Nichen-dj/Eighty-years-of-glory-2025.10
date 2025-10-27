@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今昔对比 - 抗战胜利80周年纪念</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/comparison.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <i class="fas fa-monument"></i>
+        <span>抗战胜利80周年</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#keywords">八个词，读懂伟大胜利</a></li>
+        <li><a href="#data-comparison">数据见证变迁</a></li>
+        <li><a href="#image-comparison">影像中的今夕</a></li>
+        <li><a href="#achievements">当代中国成就</a></li>
+        <li><a href="#peace-role">中国的和平力量</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 主题引言区 -->
+  <section class="hero comparison-hero">
+    <div class="hero-content">
+      <h1>80载沧桑巨变</h1>
+      <p>从抗战胜利到民族复兴，见证中国的崛起与担当</p>
+      <button class="btn" onclick="scrollToSection('keywords')">探索变迁</button>
+    </div>
+  </section>
+
+
+  <!-- 新增：八个词区域 -->
+  <section id="keywords" class="section">
+    <div class="section-title">
+      <h2>八个词，读懂伟大胜利</h2>
+    </div>
+    
+    <div class="keywords-grid">
+      <!-- 八张图片，使用原图比例 -->
+      <div class="keyword-item">
+        <img src="assets/images/Great-victory/Great-victory1.png" alt="关键词1">
+        <p>伟大胜利</p>
+      </div>
+      <div class="keyword-item">
+        <img src="assets/images/Great-victory/Great-victory2.png" alt="关键词2">
+        <p>中国共产党</p>
+      </div>
+      <div class="keyword-item">
+        <img src="assets/images/Great-victory/Great-victory3.png" alt="关键词3"> 
+        <p>中华民族脊梁</p>
+      </div>
+      <div class="keyword-item">
+        <img src="assets/images/Great-victory/Great-victory4.png" alt="关键词4">
+        <p>伟大抗战精神</p>
+      </div>
+      <div class="keyword-item">
+        <img src="assets/images/Great-victory/Great-victory5.png" alt="关键词5">
+        <p>爱国主义</p>
+      </div>
+      <div class="keyword-item">
+        <img src="assets/images/Great-victory/Great-victory6.png" alt="关键词6">
+        <p>铭记历史</p>
+      </div>
+      <div class="keyword-item">
+        <img src="assets/images/Great-victory/Great-victory7.png" alt="关键词7">
+        <p>和平发展</p>
+      </div>
+      <div class="keyword-item">
+        <img src="assets/images/Great-victory/Great-victory8.png" alt="关键词8">
+        <p>中华民族伟大复兴</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 数据对比区 -->
+  <section id="data-comparison" class="section">
+    <div class="section-title">
+      <h2>数据见证变迁</h2>
+    </div>
+    <div class="charts-grid">
+      <div class="chart-card">
+        <canvas id="gdpChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <canvas id="militaryChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <canvas id="internationalChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+    <!-- 图片对比区 -->
+    <section id="image-comparison" class="section">
+    <div class="section-title">
+        <h2>影像中的今昔</h2>
+    </div>
+    
+    <div class="comparison-grid">
+        <!-- 对比项1：城市风貌 -->
+        <div class="comparison-item">
+        <h3>城市风貌变迁</h3>
+        <div class="image-comparison-slider" id="cityComparison">
+            <div class="comparison-before">
+            <div class="slideshow-container before-slideshow">
+                <div class="slide active" style="background-image: url('assets/images/ago-now/ago-Shanghai1.jpg')"></div>
+                <div class="slide" style="background-image: url('assets/images/ago-now/ago-Shanghai2.jpg')"></div>
+                <div class="slide" style="background-image: url('assets/images/ago-now/ago-Shanghai3.jpg')"></div>
+            </div>
+            </div>
+            <div class="comparison-after">
+            <div class="slideshow-container after-slideshow">
+                <div class="slide active" style="background-image: url('assets/images/ago-now/now-Shanghai1.jpg')"></div>
+                <div class="slide" style="background-image: url('assets/images/ago-now/now-Shanghai2.jpg')"></div>
+                <div class="slide" style="background-image: url('assets/images/ago-now/now-Shanghai3.webp')"></div>
+            </div>
+            </div>
+            <div class="comparison-slider"></div>
+        </div>
+        <p>上海：从战后废墟到国际大都市</p>
+        </div>
+        
+        <!-- 对比项2：交通发展 -->
+        <div class="comparison-item">
+        <h3>交通发展变迁</h3>
+        <div class="image-comparison-slider" id="transportComparison">
+            <div class="comparison-before">
+            <div class="slideshow-container before-slideshow">
+                <div class="slide active" style="background-image: url('assets/images/vehicle/Rickshaw 1.webp') "></div>
+                <div class="slide" style="background-image: url('assets/images/vehicle/rickshaw 2.webp') "></div>
+                <div class="slide" style="background-image: url('assets/images/vehicle/rickshaw 3.jpg') "></div>
+            </div>
+            </div>
+            <div class="comparison-after">
+            <div class="slideshow-container after-slideshow">
+                <div class="slide active" style="background-image: url('assets/images/vehicle/high-speed rail 1.jpg') "></div>
+                <div class="slide" style="background-image: url('assets/images/vehicle/high-speed rail 2.webp') "></div>
+                <div class="slide" style="background-image: url('assets/images/vehicle/high-speed rail 3.webp') "></div>
+            </div>
+            </div>
+            <div class="comparison-slider"></div>
+        </div>
+        <p>交通：从人力车到高铁网络</p>
+        </div>
+        
+        <!-- 对比项3：国际地位 -->
+        <div class="comparison-item">
+        <h3>国际地位变迁</h3>
+        <div class="image-comparison-slider" id="internationalComparison">
+            <div class="comparison-before">
+            <div class="slideshow-container before-slideshow">
+                <div class="slide active" style="background-image: url('assets/images/status/past-war 1.webp') "></div>
+                <div class="slide" style="background-image: url('assets/images/status/past-war 2.webp') "></div>
+                <div class="slide" style="background-image: url('assets/images/status/past-war 3.jpg') "></div>
+            </div>
+            </div>
+            <div class="comparison-after">
+            <div class="slideshow-container after-slideshow">
+                <div class="slide active" style="background-image: url('assets/images/status/win1.jpg')"></div>
+                <div class="slide" style="background-image: url('assets/images/status/win2.jpg')"></div>
+                <div class="slide" style="background-image: url('assets/images/status/win3.jpg')"></div>
+            </div>
+            </div>
+            <div class="comparison-slider"></div>
+        </div>
+        <p>中国：从战争受害国到负责任大国</p>
+        </div>
+    </div>
+    </section>
+
+
+
+    <!-- 发展成就区 -->
+    <section id="achievements" class="section">
+    <div class="section-title">
+        <h2>当代中国成就</h2>
+    </div>
+    
+    <div class="achievements-grid">
+       
+        <div class="achievement-card">
+        <div class="achievement-icon">
+            <i class="fas fa-globe-asia"></i>
+        </div>
+        <h3>基础设施</h3>
+        <p>世界最长的高铁网络、最大的港口群、领先的5G技术，构筑起现代化基础设施体系</p>
+        <div class="achievement-slideshow">
+            <div class="achievement-slide active" style="background-image: url('assets/images/basic/bas1.png')"></div>
+            <div class="achievement-slide" style="background-image: url('assets/images/basic/bas2.jpg')"></div>
+            <div class="achievement-slide" style="background-image: url('assets/images/basic/bas3.png')"></div>
+            <div class="achievement-slide" style="background-image: url('assets/images/basic/bas4.jpg')"></div>
+        </div>
+        </div>
+        
+        <div class="achievement-card">
+        <div class="achievement-icon">
+            <i class="fas fa-hands-helping"></i>
+        </div>
+        <h3>民生改善</h3>
+        <p>脱贫攻坚战全面胜利，建成世界上规模最大的教育体系、社会保障体系和医疗卫生体系</p>
+        <div class="achievement-slideshow">
+            <div class="achievement-slide active" style="background-image: url('assets/images/livelihood/liv1.jpg')"></div>
+            <div class="achievement-slide" style="background-image: url('assets/images/livelihood/liv2.jpg') "></div>
+            <div class="achievement-slide" style="background-image: url('assets/images/livelihood/liv3.jpg')"></div>
+        </div>
+        </div>
+
+        <div class="achievement-card">
+        <div class="achievement-icon">
+            <i class="fas fa-rocket"></i>
+        </div>
+        <h3>科技突破</h3>
+        <p>从"两弹一星"到空间站建设，中国在航天、量子通信、人工智能等领域取得重大突破</p>
+        <div class="achievement-slideshow">
+            <div class="achievement-slide active" style="background-image: url('assets/images/technology/tec.jpg')"></div>
+            <div class="achievement-slide" style="background-image: url('assets/images/technology/tec2.jpg')"></div>
+            <div class="achievement-slide" style="background-image: url('assets/images/technology/tec3.jpg')"></div>
+        </div>
+        </div>
+
+        <div class="achievement-card">
+        <div class="achievement-icon">
+            <i class="fas fa-fighter-jet"></i>
+        </div>
+        <h3>军事发展</h3>
+        <p>从阅兵飞机要飞两遍，到如今东风5C导弹射程覆盖全球，中国在军事上获得了巨大的飞跃</p>
+        <div class="achievement-slideshow">
+            <div class="achievement-slide active" style="background-image: url('assets/images/military-science/military-science1.jpg')"></div>
+            <div class="achievement-slide" style="background-image: url('assets/images/military-science/military-science2.jpg')"></div>
+            <div class="achievement-slide" style="background-image: url('assets/images/military-science/military-science3.jpg')"></div>
+            <div class="achievement-slide" style="background-image: url('assets/images/military-science/military-science4.jpg')"></div>
+            <div class="achievement-slide" style="background-image: url('assets/images/military-science/military-science5.jpg')"></div>
+            <div class="achievement-slide" style="background-image: url('assets/images/military-science/military-science6.jpg')"></div>
+            <div class="achievement-slide" style="background-image: url('assets/images/military-science/military-science7.jpg')"></div>
+        </div>
+        </div>
+
+    </div>
+    </section>
+
+  <!-- 和平力量区 -->
+  <section id="peace-role" class="section peace-section">
+    <div class="section-title">
+      <h2>中国的和平力量</h2>
+    </div>
+    
+    <div class="peace-role-content">
+      <p>作为负责任大国，中国始终是世界和平的建设者、全球发展的贡献者、国际秩序的维护者。</p>
+      
+      <!-- <div class="bilibilli-video1">
+        <div class="media-item video-item">
+          <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115364801354350&bvid=BV1se4kz5E7t&cid=33032047482&p=1" 
+            width="100%"
+            scrolling="no" 
+            border="0" 
+            frameborder="no" 
+            framespacing="0" 
+            allowfullscreen="true">
+          </iframe>
+          <p>中国维和部队：维护世界和平的重要力量</p>
+        </div>
+        
+        <div class="media-item video-item">
+          <video controls>
+            <source src="assets/videos/belt-road.mp4" type="video/mp4">
+            您的浏览器不支持视频播放
+          </video>
+          <p>"一带一路"：共商共建共享的国际合作平台</p>
+        </div>
+      </div> -->
+      
+      <div class="peace-quote">
+        <i class="fas fa-quote-left"></i>
+        <p>中国无论发展到什么程度，永远不称霸，永远不搞扩张。</p>
+        <i class="fas fa-quote-right"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <p>纪念中国人民抗日战争胜利80周年</p>
+    <p>当代青年以代码为笔、以屏幕为卷，传承红色基因、铭记历史、勇担使命</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-weibo"></i></a>
+      <a href="#"><i class="fab fa-weixin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+    <p>© 2025 数字丰碑项目组 | 铭记历史，珍爱和平</p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+  <script src="js/common.js"></script>
+  <script src="js/comparison.js"></script>
+</body>
+</html>

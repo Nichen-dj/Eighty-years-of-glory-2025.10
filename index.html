@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>铭记历史 · 珍爱和平 - 抗战胜利80周年纪念</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/comparison.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <i class="fas fa-monument"></i>
+        <span>抗战胜利80周年</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#timeline">历史时间轴</a></li>
+        <li><a href="#heroes">英雄人物</a></li>
+        <li><a href="#data">数据可视化</a></li>
+        <li><a href="#comparison">今昔对比</a></li>
+        <li><a href="#peace">和平愿景</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 英雄区 -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>铭记历史 · 珍爱和平</h1>
+      <p>纪念中国人民抗日战争胜利80周年</p>
+      <p>以史为鉴，面向未来，传承红色基因，弘扬民族精神</p>
+      <button class="btn" onclick="scrollToSection('timeline')">探索历史</button>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- 时间轴 -->
+  <section id="timeline" class="section">
+    <div class="section-title">
+      <h2>抗战历史时间轴</h2>
+    </div>
+
+      <div class="timeline-search">
+        <input type="text" id="timelineSearch" placeholder="搜索历史事件...">
+        <button class="btn" onclick="searchTimeline()">搜索</button>
+        <button class="btn" onclick="resetTimeline()">重置</button>
+      </div>
+
+    <div class="timeline-container" id="timelineContainer">
+      <!-- 时间轴内容由timeline.js动态生成 -->
+    </div>
+  </section>
+
+
+
+
+  <!-- 英雄展示 -->
+  <section id="heroes" class="section">
+    <div class="section-title">
+      <h2>抗战英雄谱</h2>
+    </div>
+    
+    <!-- 添加外层容器用于实现遮罩效果 -->
+    <div class="heroes-carousel-container">
+      <div class="heroes-carousel" id="heroesCarousel">
+        <!-- 英雄卡片由heroes.js动态生成 -->
+      </div>
+    </div>
+
+    <!-- 可以保留控制按钮，也可以移除 -->
+    <div class="gallery-controls">
+      <button class="btn" id="prevHero">
+        <i class="fas fa-chevron-left"></i> 上一页
+      </button>
+      <button class="btn" id="nextHero">
+        下一页 <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+
+  <!-- 数据可视化 -->
+  <section id="data" class="section">
+    <div class="section-title">
+      <h2>历史数据可视化</h2>
+    </div>
+    <div class="charts-grid">
+      <div class="chart-card">
+        <canvas id="battleChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <canvas id="casualtyChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <canvas id="yearlyChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- 今昔对比 -->
+  <section id="comparison" class="section">
+    <div class="section-title">
+      <h2>今昔对比</h2>
+    </div>
+    <div class="cta-section">
+      <h3>80年沧桑巨变，见证民族复兴</h3>
+      <p>从抗战胜利到强国之路，数据与影像记录中国的崛起</p>
+      <a href="comparison.html" class="btn">查看今昔对比 <i class="fas fa-arrow-right"></i></a>
+    </div>
+    </div>
+  </section>
+  <!-- <div class="cta-section">
+    <h3>80年沧桑巨变，见证民族复兴</h3>
+    <p>从抗战胜利到强国之路，数据与影像记录中国的崛起</p>
+    <a href="comparison.html" class="btn">查看今昔对比 <i class="fas fa-arrow-right"></i></a>
+  </div> -->
+
+  <!-- 和平愿景 -->
+  <section id="peace" class="section peace-section">
+    <div class="section-title">
+      <h2>珍爱和平 · 开创未来</h2>
+    </div>
+    <div class="peace-content">
+      <p>80年前，中国人民经过艰苦卓绝的浴血奋战，赢得了抗日战争的伟大胜利，这是中华民族近代以来反抗外敌入侵的第一次完全胜利。</p>
+    </div>
+
+    <!-- 视频展示区域 -->
+    <div class="media-container">
+       <!-- 视频播放 -->
+        <div class="media-item video-item">
+            <video id="peaceVideo" controls >
+            <source src="assets/videos/peace_video.mp4" type="video/mp4">
+            您的浏览器不支持视频播放
+            </video>
+        </div>
+    </div>
+
+
+      
+      <p class="conclusion">当代青年应当传承和弘扬伟大的抗战精神，为实现中华民族伟大复兴的中国梦而努力奋斗，为世界和平与发展作出贡献。</p>
+      <div class="dove-animation">
+        <i class="fas fa-dove"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <p>纪念中国人民抗日战争胜利80周年</p>
+    <p>当代青年以代码为笔、以屏幕为卷，传承红色基因、铭记历史、勇担使命</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-weibo"></i></a>
+      <a href="#"><i class="fab fa-weixin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+    <p>© 2025 数字丰碑项目组 | 铭记历史，珍爱和平</p>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/heroes.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/peace.js"></script>
+
+
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+</body>
+</html>
