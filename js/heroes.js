@@ -30,7 +30,7 @@ const heroes = [
     id: 4,
     name: "赵一曼",
     title: "抗日民族英雄",
-    image: "assets/images/ZhaoYiMan.jpg",
+    image: "assets/images/ZhaoYiman.jpg",
     quote: "未惜头颅新故国，甘将热血沃中华",
     description: "著名的抗日民族英雄。她曾在东北领导工人运动和抗日斗争，后任东北抗日联军第三军第二团政委。在与日军的战斗中负伤被俘，受尽酷刑，坚贞不屈。在赴刑场的火车上，她给年幼的儿子写下了感人至深的遗书。1936年8月英勇就义，年仅31岁。"
   },
@@ -38,7 +38,7 @@ const heroes = [
     id: 5,
     name: "张自忠",
     title: "国民党陆军上将",
-    image: "assets/images/ZhangZiZhong.jpg",
+    image: "assets/images/ZhangZizhong.jpg",
     quote: "为国家民族死之决心，海不清，石不烂，决不半点改变",
     description: "著名抗日将领、民族英雄。在临沂战役、徐州会战、随枣会战中战功卓著。1940年在枣宜会战中，身为集团军总司令的他亲率部队渡河作战，与日军血战，身中数弹后壮烈牺牲。他是二战中同盟国牺牲的最高将领，他的牺牲举国哀悼，延安也为其举行了追悼会。"
   },
@@ -46,7 +46,7 @@ const heroes = [
     id: 6,
     name: "彭雪枫",
     title: "新四军第四师师长",
-    image: "assets/images/PengXueFeng.webp",
+    image: "assets/images/PengXuefeng.webp",
     quote: "为民族解放事业，我愿贡献一切",
     description: "杰出的无产阶级革命家、军事家。他领导开辟了豫皖苏抗日根据地，并创建了骑兵团。1944年9月，在河南夏邑八里庄指挥作战时，不幸被流弹击中，英勇牺牲，年仅37岁。他是新四军在抗战中牺牲的最高将领之一。"
   },
